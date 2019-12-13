@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import {GalleriaModule} from 'primeng/galleria';
+import {GMapModule} from 'primeng/gmap';
+
 
 
 @NgModule({
@@ -18,6 +20,7 @@ import {GalleriaModule} from 'primeng/galleria';
     AboutUsComponent,
   ],
   imports: [
+    GMapModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

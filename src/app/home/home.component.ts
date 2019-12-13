@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from "@angular/core";
-
+var google: any;
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -8,10 +8,15 @@ import { Component, OnInit, ViewEncapsulation } from "@angular/core";
 })
 export class HomeComponent implements OnInit {
   constructor() {}
-
+  options: any;
+  overlays: any[];
   images: any[];
-
   ngOnInit() {
+    this.options = {
+      center: { lat: 36.890257, lng: 30.707417 },
+      zoom: 12
+    };
+
     this.images = [
       {
         source: "assets/images/Catadau/Catadau1.jpeg",
@@ -24,5 +29,8 @@ export class HomeComponent implements OnInit {
         title: "Title 2"
       }
     ];
+  }
+  zoomIn(map) {
+    map.setZoom(map.getZoom() + 1);
   }
 }
