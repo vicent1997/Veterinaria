@@ -7,13 +7,9 @@
       [showCaption]="true"
     ></p-galleria>
   </div>
-  <p-gmap #gmap [options]="options"></p-gmap>
 
-  <button
-    type="button"
-    pButton
-    label="Zoom In"
-    icon="fa-search-plus"
-    (click)="zoomIn(gmap.getMap())"
-  ></button>
+  <p-gmap
+    [options]="options"
+    [style]="{ width: '100%', height: '320px' }"
+  ></p-gmap>
 </div>

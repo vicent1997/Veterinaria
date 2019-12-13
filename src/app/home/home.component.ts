@@ -9,7 +9,6 @@ var google: any;
 export class HomeComponent implements OnInit {
   constructor() {}
   options: any;
-  overlays: any[];
   images: any[];
   ngOnInit() {
     this.options = {
@@ -29,8 +28,5 @@ export class HomeComponent implements OnInit {
         title: "Title 2"
       }
     ];
-  }
-  zoomIn(map) {
-    map.setZoom(map.getZoom() + 1);
   }
 }
