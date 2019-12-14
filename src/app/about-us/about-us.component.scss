@@ -1,0 +1,15 @@
+.parallax {
+  /* The image used */
+  background-image: url("src/assets/images/perritos/perrito2.jpg");
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.div-nombre {
+  margin-top: 120px;
+  height: 200px;
+}
