@@ -1,4 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: poppins;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face{
+  font-family: pt-sans;
+  src: url(assets/fonts/PTSans-Regular.ttf) format("opentype");
+}
+
+@font-face{
+  font-family: poppins;
+  src: url(assets/fonts/Poppins-Medium.ttf) format("opentype");
+}
+
