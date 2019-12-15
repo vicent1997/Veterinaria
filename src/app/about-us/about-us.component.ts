@@ -23,7 +23,7 @@ export class AboutUsComponent implements OnInit {
         title: "Title 1"
       },
       {
-        source: "assets/images/perritos/perrito3.jpg",
+        source: "assets/images/perritos/perrito2.jpg",
         alt: "Description for Image 2",
         title: "Title 2"
       }
