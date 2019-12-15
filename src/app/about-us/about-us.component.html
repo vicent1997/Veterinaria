@@ -1,4 +1,3 @@
-
 <div class="fondo text-center p-3">
   <h1 class="display-4">VETERINARIAS RAMÓN CARBÓ A SU DISPOSICIÓN</h1>
   <p class="lead">
@@ -15,7 +14,32 @@
 <div class="row fondo">
   <div class="row justify-content-around p-5 ">
     <div class="col-5">
-      <p-galleria [images]="images" [showCaption]="true"></p-galleria>
+      <ngb-carousel *ngIf="images">
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[0]" alt="Random first slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Veterinaria Ramón</h3>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[1]" alt="Random second slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Second slide label</h3>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="picsum-img-wrapper">
+            <img [src]="images[2]" alt="Random third slide" />
+          </div>
+          <div class="carousel-caption">
+            <h3>Third slide label</h3>
+          </div>
+        </ng-template>
+      </ngb-carousel>
     </div>
     <div class="col-5">
       <p class="lead">
@@ -26,8 +50,7 @@
       </p>
     </div>
   </div>
-  
-  
+
   <div class="row justify-content-around p-5">
     <div class="col-5">
       <p-gmap
@@ -44,7 +67,6 @@
     </div>
   </div>
 </div>
-
 
 <div class="parallax-2" style="height: 70%"></div>
 

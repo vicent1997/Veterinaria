@@ -17,16 +17,9 @@ export class AboutUsComponent implements OnInit {
     };
 
     this.images = [
-      {
-        source: "assets/images/perritos/perrito1.jpg",
-        alt: "Description for Image 1",
-        title: "Title 1"
-      },
-      {
-        source: "assets/images/perritos/perrito2.jpg",
-        alt: "Description for Image 2",
-        title: "Title 2"
-      }
+      "assets/images/perritos/perrito1.jpg",
+      "assets/images/perritos/perrito2.jpg",
+      "assets/images/perritos/doctor-ahogando-perro.jpg",
     ];
   }
 }
