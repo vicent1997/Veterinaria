@@ -22,4 +22,8 @@ export class AppComponent {
       "assets/images/perritos/doctor-ahogando-perro.jpg"
     ];
   }
+
+  changePressedButton() {
+    
+  }
 }
