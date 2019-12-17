@@ -6,33 +6,21 @@
     Ramón, el jesucristo pero de los animales
   </footer>
   <hr class="my-4" />
-  <div class="btn-group btn-group-toggle" data-toggle="buttons">
-    <label class="btnsize btn btn-primary active">
-      <input
-        type="radio"
-        name="options"
-        id="Catadau"
-        autocomplete="off"
-        checked
-      />
-      Catadau
-    </label>
-    <label class="btnsize btn btn-primary">
-      <input type="radio" name="options" id="Llosa" autocomplete="off" />
-      Llosa
-    </label>
-  </div>
-  <p>
-    El todopoderoso Ramón El todopoderoso Ramón El todopoderoso Ramón El
-    todopoderoso Ramón El todopoderoso Ramón.
-  </p>
+  <mat-button-toggle-group
+    #group="matButtonToggleGroup"
+    value="catadau"
+    (change)="selectClinica(group.value)"
+  >
+    <mat-button-toggle value="catadau">Catadau</mat-button-toggle>
+    <mat-button-toggle value="llosa">Llosa</mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
 
 <div class="parallax" style="height: 40%"></div>
 
 <div class="fondo"></div>
 <div class="row">
-  <div class="row justify-content-around p-5 ">
+  <div class="row justify-content-around p-5 w-100">
     <div class="col-md-5 col-sm-10">
       <ngb-carousel *ngIf="images">
         <ng-template ngbSlide>
@@ -63,14 +51,12 @@
     </div>
     <div class="col-md-5 col-sm-10">
       <p class="lead">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti beatae
-        eum officia totam, corrupti, repudiandae, labore recusandae rem eveniet
-        quae repellendus nisi. Commodi fuga numquam est in harum necessitatibus
-        id.
+        {{ descripcion }}
       </p>
     </div>
   </div>
-  <div class="row justify-content-around p-5">
+  
+  <div class="row justify-content-around p-5 w-100">
     <div class="col-md-5 col-sm-10">
       <p-gmap
         [options]="options"
@@ -79,9 +65,7 @@
     </div>
     <div class="col-md-5 col-sm-10">
       <p class="lead">
-        El todopoderoso Ramón El todopoderoso Ramón. El todopoderoso Ramón El
-        todopoderoso Ramón. El todopoderoso Ramón El todopoderoso Ramón. El
-        todopoderoso Ramón El todopoderoso Ramón.
+        {{ horarios }}
       </p>
     </div>
   </div>

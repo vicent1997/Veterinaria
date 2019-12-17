@@ -8,19 +8,20 @@
   background-repeat: repeat;
   max-width: 100%;
 }
-.btn-primary {
-  width: 15vw !important;
-  background-color: #ffdca5;
+
+.col-md-5{
+  max-width: 700px !important;
+}
+
+.mat-button-toggle-checked {
+  background-color: #95d2e5 !important;
+  color: black !important;
+}
+
+.mat-button-toggle {
+  width: 200px;
+  background-color: #ccf3ff;
   color: black;
-  border-color: #EFAA3A !important;
-}
-.btn-primary:active{
-  background-color: #F4C77F !important;
-  color: black !important;
-}
-.active {
-  background-color: #F4C77F !important;
-  color: black !important;
 }
 
 .fondo-footer {

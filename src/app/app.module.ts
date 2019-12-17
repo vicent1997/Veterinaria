@@ -4,18 +4,18 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { GMapModule } from "primeng/gmap";
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { MatButtonToggleModule } from "@angular/material/button-toggle";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     GMapModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    MatButtonToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
