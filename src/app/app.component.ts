@@ -7,18 +7,24 @@ declare var google;
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  options: any;
+  public mapCatadau: any;
+  public mapLlosa: any;
   public images: any[];
   public descripcion: string;
   public horarios: string;
-  public ubicacion: any;
   public titulo: any;
   public overlays: any;
 
-  
-
 
   constructor() {
+    this.mapCatadau = {
+      center: { lat: 39.2736241, lng: -0.5740221 },
+      zoom: 17
+    };
+    this.mapLlosa = {
+      center: { lat: 39.0163725, lng: -0.5353881 },
+      zoom: 17
+    };
     this.overlays = [
       new google.maps.Marker({
         position: { lat: 39.2736241, lng: -0.5740221 },
@@ -29,7 +35,6 @@ export class AppComponent {
         title: "Veterinaria Llosa"
       })
     ];
-
   }
 
   ngOnInit() {
@@ -55,11 +60,6 @@ export class AppComponent {
 
       this.horarios = `Catadau Lunes - Viernes: 18:00 - 21:00
       Sabados 17:00 - 19:00`;
-      this.options = null;
-      this.options = {
-        center: { lat: 39.2736241, lng: -0.5740221 },
-        zoom: 17
-      };
     }
     if (clinica === "llosa") {
       this.titulo = "Llosa";
@@ -77,13 +77,7 @@ export class AppComponent {
       this.horarios = `La Llosa lunes-Viernes: 10:30 -13:00
       17:00 -20:00
       Sábados: 11;00 - 13:00`;
-      this.options = null;
-      this.options = {
-        center: { lat: 39.0163725, lng: -0.5353881 },
-        zoom: 17
-      };
     }
   }
 
-  changePressedButton() {}
 }
