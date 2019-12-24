@@ -7,6 +7,7 @@ import { GMapModule } from "primeng/gmap";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { HttpClientModule } from '@angular/common/http';
+import { BarRatingModule } from "ngx-bar-rating";
 
 @NgModule({
   declarations: [AppComponent],
@@ -17,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     NgbModule,
     MatButtonToggleModule,
-    HttpClientModule
+    HttpClientModule,
+    BarRatingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

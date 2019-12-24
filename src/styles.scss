@@ -9,13 +9,20 @@ body {
   overflow-x: hidden;
 }
 
-@font-face{
+@font-face {
   font-family: pt-sans;
   src: url(assets/fonts/PTSans-Regular.ttf) format("opentype");
 }
 
-@font-face{
+@font-face {
   font-family: poppins;
   src: url(assets/fonts/Poppins-Medium.ttf) format("opentype");
 }
 
+.pi {
+  vertical-align: bottom !important;
+}
+
+.material-icons{
+  vertical-align: middle !important;
+}

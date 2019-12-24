@@ -25,6 +25,8 @@
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/ngx-bar-rating/themes/br-default-theme.css",
+              "node_modules/material-icons/iconfont/material-icons.scss",
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/themes/nova-light/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
