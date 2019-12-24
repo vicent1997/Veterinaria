@@ -1,4 +1,5 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
 declare var google;
 
 @Component({
@@ -14,9 +15,9 @@ export class AppComponent {
   public horarios: string;
   public titulo: any;
   public overlays: any;
+  public reviews:any = [];
 
-
-  constructor() {
+  constructor(private http: HttpClient) {
     this.mapCatadau = {
       center: { lat: 39.2736241, lng: -0.5740221 },
       zoom: 17
@@ -39,6 +40,15 @@ export class AppComponent {
 
   ngOnInit() {
     this.selectClinica("catadau");
+    let googleAddress =
+      "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJe-sT5lmqYQ0RQE4TlMzIlH4&key=AIzaSyCtQNvbzYlliUthKPvgaMu00BAQxbb1iI4";
+
+    this.http.get(googleAddress).subscribe((response:any) => {
+      response.result.reviews.forEach(review => {
+        this.reviews.push(review);
+      });;
+    });
+
   }
 
   public selectClinica(clinica: string) {
@@ -79,5 +89,4 @@ export class AppComponent {
       Sábados: 11;00 - 13:00`;
     }
   }
-
 }

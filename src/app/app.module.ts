@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { GMapModule } from "primeng/gmap";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -15,7 +16,8 @@ import { MatButtonToggleModule } from "@angular/material/button-toggle";
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
