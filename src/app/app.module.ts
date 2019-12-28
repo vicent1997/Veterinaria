@@ -8,6 +8,7 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { HttpClientModule } from '@angular/common/http';
 import { BarRatingModule } from "ngx-bar-rating";
+import { MzParallaxModule } from 'ngx-materialize';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { BarRatingModule } from "ngx-bar-rating";
     MatButtonToggleModule,
     HttpClientModule,
     BarRatingModule,
+    MzParallaxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

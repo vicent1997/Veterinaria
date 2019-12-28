@@ -1,11 +1,12 @@
-import { Component } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 declare var google;
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"]
+  styleUrls: ["./app.component.scss"],
+  encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
   public mapCatadau: any;
@@ -40,16 +41,21 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.selectClinica("catadau");
+    this.selectClinica("llosa");
     let googleAddress =
       "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJe-sT5lmqYQ0RQE4TlMzIlH4&key=AIzaSyCtQNvbzYlliUthKPvgaMu00BAQxbb1iI4";
 
     this.http.get(googleAddress).subscribe((response: any) => {
-      console.log(response);
+      let reviews = response.result.reviews;
 
-      response.result.reviews.forEach(review => {
-        this.reviews.push(review);
-      });
+      for (const review of reviews) {
+        if (!review.text) {
+          review.text = "wow!";
+        }
+        if (this.reviews.length < 4) {
+          this.reviews.push(review);
+        }
+      }
     });
   }
 

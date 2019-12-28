@@ -25,6 +25,7 @@
             "aot": false,
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
+              "node_modules/materialize-css/dist/css/materialize.min.css",
               "node_modules/ngx-bar-rating/themes/br-default-theme.css",
               "node_modules/material-icons/iconfont/material-icons.scss",
               "node_modules/primeicons/primeicons.css",
@@ -34,7 +35,9 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/materialize-css/dist/js/materialize.min.js"
+            ]
           },
           "configurations": {
             "production": {
