@@ -45,18 +45,28 @@ export class AppComponent {
     let googleAddress =
       "https://maps.googleapis.com/maps/api/place/details/json?placeid=ChIJe-sT5lmqYQ0RQE4TlMzIlH4&key=AIzaSyCtQNvbzYlliUthKPvgaMu00BAQxbb1iI4";
 
-    this.http.get(googleAddress).subscribe((response: any) => {
-      let reviews = response.result.reviews;
+    const proxyurl = "https://cors-anywhere.herokuapp.com/";
+    fetch(proxyurl + googleAddress)
+      .then(async response => JSON.parse(await response.text()))
+      .then(response => this.handleResponse(response))
+      .catch(() =>
+        console.log(
+          "Can’t access " + googleAddress + " response. Blocked by browser?"
+        )
+      );
+  }
 
-      for (const review of reviews) {
-        if (!review.text) {
-          review.text = "wow!";
-        }
-        if (this.reviews.length < 4) {
-          this.reviews.push(review);
-        }
+  private handleResponse(response) {
+    let reviews = response.result.reviews;
+
+    for (const review of reviews) {
+      if (!review.text) {
+        review.text = "wow!";
       }
-    });
+      if (this.reviews.length < 4) {
+        this.reviews.push(review);
+      }
+    }
   }
 
   public selectClinica(clinica: string) {
